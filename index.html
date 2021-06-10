@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Transaltor</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="navbar"> 
+        <h1 class="nav-heading">Welcome to Fun-Transaltor App.</h1>
+    </nav>
+    <div class="select-div">
+        <label>Select type to transalate your text : </label>
+        <select id="select-translation" class="select-dd">
+            <option value="">Select type</option>
+            <option value="minion">Minion</option>
+            <option value="yoda">Yoda</option>
+            <option value="pirate">Pirate</option>
+            <option value="hodor">Hodor</option>
+        </select>
+    </div>
+    <textarea id="txt-to-translate" class="txt-transalte" ></textarea>
+    <div class="btns">
+        <button class="btn-primary" id="btn-translate">Translate</button>
+        <button class="btn-secondary" id="btn-clear">Clear</button>
+    </div>
+    <div class="div-output" id="txt-translated">
+    </div>
+    <footer class="foot">
+        <h4 class="foot-heading">Thanks for using our transaltor.</h4>
+        <small class="foot-info">Created by Shubham &copy 2021-22</small>
+    </footer>
+    <script src="./App.js"></script>
+</body>
+</html>
