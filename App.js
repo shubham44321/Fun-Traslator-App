@@ -42,10 +42,19 @@ function errorHandler(ex){
 
 async function getData(text,type){
     const url = encodeURI(appendtextToUrl(text,type));
-    //console.log(url);
-    const transaletedText = fetch(url)
-    .then(response => response.json())
-    .then(json => json.contents.translated)
+    const request = await fetch(url)
     .catch(errorHandler);
-    return await transaletedText;
+    try {
+        const response = await request.json();
+        if(request.status !== 200){
+            alert(response.error.message);
+            return "";
+        }
+        else{
+            return response.contents.translated;
+        }   
+    } catch (error) {
+        console.log(error);
+        alert("Something went wrong.")
+    }
 }
